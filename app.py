@@ -1,3 +1,4 @@
+from crypt import methods
 import sqlite3
 
 from flask import Flask , render_template
@@ -7,9 +8,11 @@ app = Flask(__name__)
 app.secret_key = "kari-time"
 
 
-@app.route("/kari-time")
+@app.route("/")
 def template():
-    return render_template("base.html")
+    return render_template("top.html")
+
+
 
 
 
@@ -17,18 +20,20 @@ def template():
 
 @app.route("/item_list" , methods = ["GET"])
 def item():
-    return render_template("item_list.html")
-
-    #『sqlite3でItem.dbに接続する』ことを変数connに代入する
-    conn = sqlite3.connect("Item.db")
-    #『sqlite3に接続して、dbを操作できるようにしてね』ということを変数cに代入
-    c = conn.cursor()
-    #()内のSQL文を実行(execute)してね
-    c.execute("SELECT * FROM Item;")
-    #Item.dbとの接続を終了する
-    c.close()
-
-
+  # DBへの接続と、データを全部取ってくる
+  #conn = sqlite3に接続して
+  conn = sqlite3.connect("Item.db")
+  #DBを操作できるようにして
+  c = conn.cursor()
+  # ()内のSQL文を実行
+  c.execute("SELECT item_name FROM Item;")
+  # タスクのデータを入れる配列を定義
+  item_list = []  #配列の初期化
+  for row in c.fetchall():
+      item_list.append({"item":row[0]},)
+  c.close
+  print(item_list)
+  return render_template("item_list.html",item_list = item_list)
 
 
 
@@ -41,4 +46,4 @@ def item():
 
 if __name__ == "__main__":
 
-    app.run()
+    app.run(debug=True)
