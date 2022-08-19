@@ -8,9 +8,9 @@ app = Flask(__name__)
 app.secret_key = "kari-time"
 
 
-@app.route("/top")
+@app.route("/")
 def template():
-    return render_template("base.html")
+    return render_template("top.html")
 
 
 
