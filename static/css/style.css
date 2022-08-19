@@ -18,6 +18,7 @@ body {
 .bg-light {
 	background-image: url(../img/bgi_nav.jpg);
 	background-size: cover;
+
 }
 
 
@@ -31,3 +32,11 @@ body {
 	object-fit: cover;
 	margin: 50px 0;
 }
+
+#sec1 {
+	height: 600px;
+	width: 100%;
+	display: flex;
+}
+
+
