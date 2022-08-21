@@ -11,12 +11,53 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
 }
 
 body {
-	background-color: rgb(230, 250, 255);
+	background-color: rgb(255, 255, 255);
 	padding-top: 56px;
 }
 
+.navbar {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.navbar-img {
+	height: 60px;
+	display: flex;
+}
+
+#navbar_rogo{
+	height: 50px;
+	width: fit-content;
+	margin-left: 10px;
+	display: flex;
+}
+
+.navbar-toggler {
+	margin-left: auto;
+}
+
+.nav-item {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.carousel-inner {
+	position: relative;
+}
+
+#rogo-text {
+	max-width: 30%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: 150;
+}
+
 .bg-light {
-	background-image: url(../img/bgi_nav.jpg);
+	/* background-image: url(../img/bgi_nav.jpg); */
 	background-size: cover;
 
 }
