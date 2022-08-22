@@ -41,6 +41,10 @@ body {
 	justify-content: flex-end;
 }
 
+.breadcrumb {
+	margin-top: 40px;
+}
+
 .carousel-inner {
 	position: relative;
 }
