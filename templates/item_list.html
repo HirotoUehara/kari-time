@@ -1,6 +1,13 @@
 {% extends "top.html" %}
 {% block content %}
 
+<!-- breadcrumb -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://127.0.0.1:5000/">トップページ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">商品一覧</li>
+  </ol>
+</nav>
 
       <!-- 商品カード -->
       {% for item in item_list %}
@@ -9,7 +16,7 @@
         <div class="card-body">
           <h5 class="card-title">{{item["item"]}}</h5>
           <p class="card-text">{{item["explain"]}}</p>
-          <a href="#" class="btn btn-primary">詳細を見る</a>
+          <a href="http://127.0.0.1:5000/item" class="btn btn-primary">詳細を見る</a>
         </div>
       </div>
       {% endfor %}
