@@ -4,11 +4,12 @@
 
       <!-- 商品カード -->
       {% for item in item_list %}
-      <div class="card" style="width: 18rem;">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+      <div class="card" style="width: 20rem;">
+        <img src="{{item['item_img']}}" class="card-img-top" alt="...">
+        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
         <div class="card-body">
           <h5 class="card-title">{{item["item"]}}</h5>
-          <p class="card-text">{{item["explain"]}}</p>
+          <p class="card-text">{{item["price"]}}</p>
           <a href="#" class="btn btn-primary">詳細を見る</a>
         </div>
       </div>
