@@ -8,28 +8,46 @@ app = Flask(__name__)
 app.secret_key = "kari-time"
 
 
-@app.route("/")
+@app.route("/" , methods = ["GET" , "POST"])
 def template():
     return render_template("top.html")
 
 
 
-@app.route("/item_list" , methods = ["GET"])
-def item_list():
+@app.route("/taste1_list/<taste1>" , methods = ["GET"])
+def taste1_list(taste1):
   # DBへの接続と、データを全部取ってくる
   #conn = sqlite3に接続して
   conn = sqlite3.connect("Item.db")
   #DBを操作できるようにして
   c = conn.cursor()
   # ()内のSQL文を実行
-  c.execute("SELECT item_name, item_img, price FROM Item;")
+  c.execute("SELECT item_img, item_name, price FROM Item where taste1 = ?;",(taste1,))
   # タスクのデータを入れる配列を定義
   item_list = []  #配列の初期化
   for row in c.fetchall(): #row=新しく作った変数
       item_list.append({"item_img":row[0],"item":row[1],"price":row[2]})
   c.close
   print(item_list)
-  return render_template("item_list.html",item_list = item_list)
+  return render_template("taste1_list.html",item_list = item_list)
+
+
+@app.route("/type_list/<type>" , methods = ["GET"])
+def type_list(type):
+  # DBへの接続と、データを全部取ってくる
+  #conn = sqlite3に接続して
+  conn = sqlite3.connect("Item.db")
+  #DBを操作できるようにして
+  c = conn.cursor()
+  # ()内のSQL文を実行
+  c.execute("SELECT item_name, item_img, price FROM Item where type = ?;",(type,))
+  # タスクのデータを入れる配列を定義
+  item_list = []  #配列の初期化
+  for row in c.fetchall(): #row=新しく作った変数
+      item_list.append({"item_img":row[0],"item":row[1],"price":row[2]})
+  c.close
+  print(item_list)
+  return render_template("type_list.html",item_list = item_list)
 
 
 
