@@ -44,7 +44,7 @@ def type_list(type):
   # タスクのデータを入れる配列を定義
   item_list = []  #配列の初期化
   for row in c.fetchall(): #row=新しく作った変数
-      item_list.append({"item":row[0],"item_img":row[1],"price":row[2]})
+      item_list.append({"item_img":row[0],"item":row[1],"price":row[2]})
   c.close
   print(item_list)
   return render_template("type_list.html",item_list = item_list)
