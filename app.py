@@ -40,7 +40,7 @@ def type_list(type):
   #DBを操作できるようにして
   c = conn.cursor()
   # ()内のSQL文を実行
-  c.execute("SELECT item_name, item_img, price FROM Item where type = ?;",(type,))
+  c.execute("SELECT  item_img, item_name, price FROM Item where type = ?;",(type,))
   # タスクのデータを入れる配列を定義
   item_list = []  #配列の初期化
   for row in c.fetchall(): #row=新しく作った変数
