@@ -64,10 +64,6 @@ body {
 }
 
 
-.card-deck {
-  padding: 10%;
-}
-
 #mainvisual img {
 	width: 100%;
 	height: 500px;
@@ -81,4 +77,14 @@ body {
 	display: flex;
 }
 
+.sec-card {	
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
 
+.container { 
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+}
