@@ -11,13 +11,15 @@ body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
 }
 
 body {
-	background-color: rgb(255, 255, 255);
+	background-image: url(../img/backg-waves.jpeg);
+	background-repeat: repeat;
 	padding-top: 56px;
 }
 
 .navbar {
 	display: flex;
 	justify-content: flex-start;
+	background-color: #bfecff;
 }
 
 .navbar-img {
@@ -43,6 +45,7 @@ body {
 
 .breadcrumb {
 	margin-top: 40px;
+	background-color: #8EDDFF;
 }
 
 .carousel-inner {
@@ -58,12 +61,6 @@ body {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   z-index: 150;
-}
-
-.bg-light {
-	/* background-image: url(../img/bgi_nav.jpg); */
-	background-size: cover;
-
 }
 
 
