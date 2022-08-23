@@ -1,86 +1,52 @@
 {% extends "base.html" %}
 {% block content %}
 
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="http://127.0.0.1:5000/">トップページ</a></li>
+      <li class="breadcrumb-item"><a href="http://127.0.0.1:5000/item_list">商品一覧</a></li>
+      <li class="breadcrumb-item active" aria-current="page">商品詳細</li>
+    </ol>
+  </nav>
 
-      <!-- {% for item in item %} -->
-      <!-- <div class="card" style="width: 18rem;">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-        <div class="card-body">
+
+  <section id="sec1">
+    <div class="card mb-3" style="width: 1000px;  height: 500px; margin: auto;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
             <h5 class="item-name">{{item["item"]}}</h5>
             <p class="item-price">{{item["price"]}}</p>
             <p class="item-abv">{{item["abv"]}}</p>
-            <p class="item-type">{{item["type"]}}</p>
-
+            <p class="item-type">{{item["type"]}}</p>  
             <p class="item-explain">{{item["explain"]}}</p>
-        </div>
-      </div> -->
-      <!-- breadcrumb -->
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="http://127.0.0.1:5000/">トップページ</a></li>
-          <li class="breadcrumb-item"><a href="http://127.0.0.1:5000/item_list">商品一覧</a></li>
-          <li class="breadcrumb-item active" aria-current="page">商品詳細</li>
-        </ol>
-      </nav>
-
-
-      <section id="sec1">
-        <div class="card mb-3" style="width: 1000px;  height: 500px; margin: auto;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="item-name">{{item["item"]}}</h5>
-                <p class="item-price">{{item["price"]}}</p>
-                <p class="item-abv">{{item["abv"]}}</p>
-                <p class="item-type">{{item["type"]}}</p>  
-
-                <p class="item-explain">{{item["explain"]}}</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
 
 
-      <section id="sec2">
-        <div class="container">
-          <div class="row">
-            {% for item in item %}
-            <div class="card col-xl-4" style="width: 18rem;">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-              <div class="card-body">
-                  <h5 class="item-name">{{item["item"]}}</h5>
-                  <p class="item-explain">{{item["explain"]}}</p>
-              </div>
-            </div>
-            {% endfor %}
+  <!-- <section id="sec2">
+    <div class="container">
+       <div class="row">
+        {% for item in items %}
+        <div class="card col-xl-4" style="width: 18rem;">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+          <div class="card-body">
+              <h5 class="item-name">{{item["item"]}}</h5>
+              <p class="item-explain">{{item["explain"]}}</p>
           </div>
         </div>
-      </section>
-
-      <!-- {% endfor %} -->
-
-
-      <!-- <div class="card" style="width: 18rem;">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div> -->
+        {% endfor %}
+      </div>
+    </div>
+  </section> -->
 
 
 {% endblock %}

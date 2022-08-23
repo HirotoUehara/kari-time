@@ -40,7 +40,7 @@ def type_list(type):
   #DBを操作できるようにして
   c = conn.cursor()
   # ()内のSQL文を実行
-  c.execute("SELECT  item_img, item_name, price FROM Item where type = ?;",(type,))
+  c.execute("SELECT item_img, item_name, price FROM Item where type = ?;",(type,))
   # タスクのデータを入れる配列を定義
   item_list = []  #配列の初期化
   for row in c.fetchall(): #row=新しく作った変数
@@ -60,13 +60,18 @@ def item():
   c = conn.cursor()
   # ()内のSQL文を実行
   c.execute("SELECT item_name, price, abv, type, explain FROM Item where id = 1;")
-  # タスクのデータを入れる配列を定義
   item = []  #配列の初期化
   for row in c.fetchall(): #row=新しく作った変数
       item.append({"item":row[0],"price":row[1],"abv":row[2],"type":row[3],"explain":row[4]})
+  # c.execute("SELECT item_name, explain FROM Item;")
+  # items = []  #配列の初期化
+  # for row2 in c.fetchall(): #row=新しく作った変数
+  #     items.append({"item":row2[0],"explain":row2[1]})
   c.close
   print(item)
-  return render_template("item.html", item = item)
+  print("----------------")
+  # print(items)
+  return render_template("item.html",item = item)
 
 # @app.route("/item" , methods = ["GET"])
 # def item2():
