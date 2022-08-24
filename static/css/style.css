@@ -23,19 +23,30 @@ body {
 }
 
 .navbar-img {
-	height: 60px;
+	width: 40vw;
+	max-width: 180px;
+	min-width: 120px;
 	display: flex;
 }
 
-#navbar_rogo{
-	height: 50px;
-	width: fit-content;
+#navbar_rogo {
+	width: 40vw;
+	max-width: 30px;
 	margin-left: 10px;
-	display: flex;
+}
+
+.navbar_rogo {
+	width: 40vw;
+	max-width: 30px;
+	margin-left: 10px;
+}
+
+.tweet-btn {
+	margin-left: auto;
 }
 
 .navbar-toggler {
-	margin-left: auto;
+	margin-left: 10px;
 }
 
 .nav-item {
@@ -133,4 +144,9 @@ body {
 
 .item-name {
 	line-height: 60px;
+}
+
+.footer {
+	display: flex;
+	flex-wrap: wrap;
 }
