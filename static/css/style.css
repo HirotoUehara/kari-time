@@ -88,3 +88,22 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 }
+
+.item-name {
+	color: #82cddd;
+	font-weight: 550;
+}
+
+
+.item-explain {
+	color: gray;
+	font-size: 20px;
+}
+
+.itemcard-body {
+	line-height: 38px;
+}
+
+.item-name {
+	line-height: 60px;
+}
