@@ -63,7 +63,7 @@ body {
 	position: relative;
 }
 
-#rogo-text {
+.rogo-text {
 	max-width: 30%;
 	position: absolute;
 	top: 50%;
@@ -208,11 +208,17 @@ body {
 	padding-left: 20px;
 }
 
-
+#item-tweet {
+	padding: 20px;
+}
 
 
 .footer {
+	background-color: #bfecff;
+	margin: auto;
+	width: 80%;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
