@@ -14,18 +14,19 @@
 
 
 <section id="sec1">
-  <div class="card mb-3" style="width: 1000px;  height: 500px; margin: auto; padding-top: 70px;">
-    <div class="row no-gutters">
+  <div class="card mb-3" style="width: 1100px;  height: 500px; margin: auto; margin-top: 40px; padding-top: 20px; padding-right: 50px;">
+    <div class="row no-gutters itembox-main">
       <div class="col-md-4">
-        <img src="{{item['img']}}" class="card-img-top" alt="" style="width: 360px;">
+        <img src="{{item['img']}}" class="card-img-top item-img" alt="" style="width: 360px;">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-8 itembox">
         <div class="itemcard-body">
           <h3 class="item-name">{{item["item"]}}</h3>
-          <p class="item-price">Price: {{item["price"]}}</p>
-          <p class="item-abv">Alc: {{item["abv"]}}</p>
-          <p class="item-type">Type:<a href="/type_list/{{item['type']}}">{{item["type"]}}</a></p>
-          <p class="item-type">Shop:<a href="{{item['URL']}}">商品の購入はこちら！</a></p>
+          <p class="item-price"><span style="color: #25b7c0;">Price : </span>{{item["price"]}}(税込)</p>
+          <p class="item-abv"><span style="color: #25b7c0;">  Alc  : </span>{{item["abv"]}}</p>
+          <p class="item-type"><span style="color: #25b7c0;"> Type : </span><a href="/type_list/{{item['type']}}">{{item["type"]}}</a></p>
+          <p class="item-type"><span style="color: #25b7c0;">Taste : </span><a href="/taste1_list/{{item['taste']}}">{{item["taste"]}}</a></p>
+          <p class="item-shop"><span style="color: #25b7c0;"> Shop : </span><a href="{{item['URL']}}">商品の購入はこちら！</a></p>
 
           <p class="item-explain">{{item["explain"]}}</p>
         </div>

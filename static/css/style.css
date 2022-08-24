@@ -116,21 +116,85 @@ body {
 	flex-wrap: wrap;
 }
 
-.item-name {
-	color: #82cddd;
-	font-weight: 550;
+.card {
+	/* max-width: 500px; */
+	max-height: 500px;
 }
 
+.card-img-top{
+	max-width: 260px;
+	max-height: 260px;
+	object-fit: contain;
+}
+
+
+
+/* --------item.htmlのcss-------- */
+
+.itembox {
+	padding: auto;
+
+}
+
+/* .itembox-main{
+	display: flex;
+	align-items: center;
+} */
+
+.itemcard-body {
+	line-height: 30px;
+	padding-left: 60px;
+}
+
+.col-md-4 {
+	width: 360px;
+	height: 400px;
+}
+
+.item-img {
+	max-width: 360px;
+	max-height: 360px;
+	padding-left: 10px;
+	margin-top: 40px;
+	object-fit: contain;
+}
+
+
+.item-name {
+	color: #e73562;
+	font-weight: 550;
+	line-height: 60px;
+	padding-top: 40px;
+}
+
+.item-price {
+	font-family: HuiFontP109;
+	padding-left: 20px;
+
+}
+
+.item-abv {
+	font-family: HuiFontP109;
+	padding-left: 20px;
+}
+
+.item-type {
+	font-family: HuiFontP109;
+	padding-left: 20px;
+}
+
+.item-shop {
+	font-family: HuiFontP109;
+	padding-left: 20px;
+}
 
 .item-explain {
 	color: gray;
-	font-size: 20px;
+	font-size: 18px;
+	line-height: 25px;
+	padding-top: 40px;
+	padding-right: 30px;
+	padding-left: 20px;
 }
 
-.itemcard-body {
-	line-height: 38px;
-}
 
-.item-name {
-	line-height: 60px;
-}
