@@ -11,9 +11,15 @@
   <body>
 
       <!-- ナブバー -->
-      <nav class="navbar navbar-light bg-light fixed-top">
+      <nav class="navbar navbar-light fixed-top">
         <a href="http://127.0.0.1:5000/"><img class="navbar-img" src="../static/img/kari-time.png" alt="kari-time"></a>
         <a href="http://127.0.0.1:5000/"><img id="navbar_rogo" src="../static/img/rogo_black.png" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+
+        <!-- twitter -->
+       <div class="tweet-btn">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="【沖縄のお酒で乾杯しよう！】好みのお酒が見つかるかも？ https://twitter.com/lurejunkie/status/1562402317387067395/photo/1" data-via="lurejunkie" data-hashtags="かりーたいむ" data-lang="en" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div> 
+      
         <!-- ハンバーガーメニュー -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -25,13 +31,37 @@
               <a class="nav-link" href="http://127.0.0.1:5000/">トップページ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:5000/taste1_list">味で選ぶ</a>
+              <p class="nav-link dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #bfecff;">
+                味で選ぶ
+                <div class="dropdown-menu" style="background-color: #bfecff;">
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/柑橘系">柑橘系</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/マンゴー">マンゴー</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/梅">梅</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/パイン">パイン</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/コーヒー">コーヒー</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/その他">その他</a>
+                </div>
+              </p>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:5000/type_list">タイプで選ぶ</a>
+                <p class="nav-link dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #bfecff;">
+                タイプで選ぶ
+                <div class="dropdown-menu" style="background-color: #bfecff;">
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/type_list/リキュール">リキュール</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/type_list/梅酒">梅酒</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/type_list/泡盛">泡盛</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/type_list/スパークリング">スパークリング</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/type_list/その他">その他</a>
+                </div>
+              </p>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:5000/scene_list">シーンで選ぶ</a>
+              <p class="nav-link dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #bfecff;">
+                シーンで選ぶ
+                <div class="dropdown-menu" style="background-color: #bfecff;">
+                  <a class="dropdown-item" href="http://127.0.0.1:5000/scene2_list/プレゼントで">プレゼント</a>
+                </div>
+              </p>
             </li>
           </ul>
         </div>
@@ -51,110 +81,56 @@
 
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
-    </div>
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
-
   <!-- Section: Links  -->
-  <section class="">
+  <section class="footer">
     <div class="container text-center text-md-start mt-5">
       <!-- Grid row -->
-      <div class="row mt-3">
+      <div class="row mt-4">
         <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="width: 60vw; display: flex; align-items: center;" >
           <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
-          </h6>
-          <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
-          </p>
+          <a href="http://127.0.0.1:5000/"><img class="navbar-img" src="../static/img/kari-time.png" alt="kari-time"></a>
+          <a href="http://127.0.0.1:5000/"><img id="navbar_rogo" src="../static/img/rogo_black.png" width="30" height="30" class="d-inline-block align-top" alt=""></a>
         </div>
         <!-- Grid column -->
 
         <!-- Grid column -->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Products
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Angular</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">React</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Vue</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Laravel</a>
-          </p>
+
+          <h5 class="text-uppercase fw-bold mb-4">
+            味で選ぶ
+          </h5>
+            <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/柑橘系">柑橘系</a>
+            <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/マンゴー">マンゴー</a>
+            <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/梅">梅</a>
+            <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/パイン">パイン</a>
+            <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/コーヒー">コーヒー</a>
+            <a class="dropdown-item" href="http://127.0.0.1:5000/taste1_list/その他">その他</a>
         </div>
         <!-- Grid column -->
 
         <!-- Grid column -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Pricing</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Settings</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
+          <h5 class="text-uppercase fw-bold mb-4">
+            タイプで選ぶ
+          </h5>
+          <a class="dropdown-item" href="http://127.0.0.1:5000/type_list/リキュール">リキュール</a>
+          <a class="dropdown-item" href="http://127.0.0.1:5000/type_list/梅酒">梅酒</a>
+          <a class="dropdown-item" href="http://127.0.0.1:5000/type_list/泡盛">泡盛</a>
+          <a class="dropdown-item" href="http://127.0.0.1:5000/type_list/スパークリング">スパークリング</a>
+          <a class="dropdown-item" href="http://127.0.0.1:5000/type_list/その他">その他</a>
         </div>
         <!-- Grid column -->
 
         <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-          <p>
-            <i class="fas fa-envelope me-3"></i>
-            info@example.com
-          </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          <h5 class="text-uppercase fw-bold mb-4">
+            シーンで選ぶ
+          </h5>
+          <a class="dropdown-item" href="http://127.0.0.1:5000/scene2_list/プレゼントで">プレゼント</a>
         </div>
         <!-- Grid column -->
       </div>
@@ -165,8 +141,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    © 2022 Copyright: かりーたいむ
   </div>
   <!-- Copyright -->
 </footer>
@@ -178,7 +153,6 @@
 
     <!-- Optional JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>
