@@ -22,11 +22,11 @@ def taste1_list(taste1):
   #DBを操作できるようにして
   c = conn.cursor()
   # ()内のSQL文を実行
-  c.execute("SELECT item_img, item_name, price FROM Item where taste1 = ?;",(taste1,))
+  c.execute("SELECT item_img, item_name, price , id FROM Item where taste1 = ?;",(taste1,))
   # タスクのデータを入れる配列を定義
   item_list = []  #配列の初期化
   for row in c.fetchall(): #row=新しく作った変数
-      item_list.append({"item_img":row[0],"item":row[1],"price":row[2]})
+      item_list.append({"item_img":row[0],"item":row[1],"price":row[2],"id":row[3]})
   c.close
   print(item_list)
   return render_template("taste1_list.html",item_list = item_list)
@@ -40,11 +40,11 @@ def type_list(type):
   #DBを操作できるようにして
   c = conn.cursor()
   # ()内のSQL文を実行
-  c.execute("SELECT  item_img, item_name, price FROM Item where type = ?;",(type,))
+  c.execute("SELECT  item_img, item_name, price , id FROM Item where type = ?;",(type,))
   # タスクのデータを入れる配列を定義
   item_list = []  #配列の初期化
   for row in c.fetchall(): #row=新しく作った変数
-      item_list.append({"item_img":row[0],"item":row[1],"price":row[2]})
+      item_list.append({"item_img":row[0],"item":row[1],"price":row[2],"id":row[3]})
   c.close
   print(item_list)
   return render_template("type_list.html",item_list = item_list)
@@ -69,21 +69,27 @@ def scene2_list(scene2):
 
 
 
-@app.route("/item" , methods = ["GET"])
-def item():
+@app.route("/item/<id>" , methods = ["GET"])
+def item(id):
   # DBへの接続と、データを全部取ってくる
   #conn = sqlite3に接続して
   conn = sqlite3.connect("Item.db")
   #DBを操作できるようにして
   c = conn.cursor()
   # ()内のSQL文を実行
-  c.execute("SELECT item_name, price, abv, type, explain FROM Item where id = 1;")
+  c.execute("SELECT item_img, item_name, price, abv, type, URL, explain FROM Item where id = ?;",(id,))
   # タスクのデータを入れる配列を定義
   item = []  #配列の初期化
   for row in c.fetchall(): #row=新しく作った変数
-      item.append({"item":row[0],"price":row[1],"abv":row[2],"type":row[3],"explain":row[4]})
+      item.append({"img":row[0],"item":row[1],"price":row[2],"abv":row[3],"type":row[4],"URL":row[5],"explain":row[6]})
+  # c.execute("SELECT item_name, explain FROM Item;")
+  # # タスクのデータを入れる配列を定義
+  # item_list = []  #配列の初期化
+  # for row2 in c.fetchall(): #row=新しく作った変数
+  #     item_list.append({"item":row2[0],"explain":row2[1]})
   c.close
   print(item)
+  print("--------------")
   return render_template("item.html", item = item)
 
 # @app.route("/item" , methods = ["GET"])
