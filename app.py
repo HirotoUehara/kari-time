@@ -77,11 +77,11 @@ def item(id):
   #DBを操作できるようにして
   c = conn.cursor()
   # ()内のSQL文を実行
-  c.execute("SELECT item_img, item_name, price, abv, type, URL, explain FROM Item where id = ?;",(id,))
+  c.execute("SELECT item_img, item_name, price, abv, type, taste1, URL, explain FROM Item where id = ?;",(id,))
   # タスクのデータを入れる配列を定義
   item = []  #配列の初期化
   for row in c.fetchall(): #row=新しく作った変数
-      item.append({"img":row[0],"item":row[1],"price":row[2],"abv":row[3],"type":row[4],"URL":row[5],"explain":row[6]})
+      item.append({"img":row[0],"item":row[1],"price":row[2],"abv":row[3],"type":row[4],"taste":row[5],"URL":row[6],"explain":row[7]})
   # c.execute("SELECT item_name, explain FROM Item;")
   # # タスクのデータを入れる配列を定義
   # item_list = []  #配列の初期化
