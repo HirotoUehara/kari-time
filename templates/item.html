@@ -18,6 +18,7 @@
     <div class="row no-gutters itembox-main">
       <div class="col-md-4">
         <img src="{{item['img']}}" class="card-img-top item-img" alt="" style="width: 360px;">
+        <p>引用元:{{item['URL']}}</p>
       </div>
       <div class="col-md-8 itembox">
         <div class="itemcard-body">
@@ -29,6 +30,10 @@
           <p class="item-shop"><span style="color: #25b7c0;"> Shop : </span><a href="{{item['URL']}}">商品の購入はこちら！</a></p>
 
           <p class="item-explain">{{item["explain"]}}</p>
+          <div class="tweet-btn" id="item-tweet">
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="【沖縄のお酒で乾杯しよう！】気になるお酒を友達とシェア" data-via="lurejunkie" data-hashtags="かりーたいむ" data-lang="en" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <p>気になるお酒を友達とシェアしよう！</p>
+          </div> 
         </div>
       </div>
     </div>
