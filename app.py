@@ -50,22 +50,22 @@ def type_list(type):
   return render_template("type_list.html",item_list = item_list)
 
 
-@app.route("/scene2_list/<scene2>" , methods = ["GET"])
-def scene2_list(scene2):
+@app.route("/scene1_list/<scene1>" , methods = ["GET"])
+def scene1_list(scene1):
   # DBへの接続と、データを全部取ってくる
   #conn = sqlite3に接続して
   conn = sqlite3.connect("Item.db")
   #DBを操作できるようにして
   c = conn.cursor()
   # ()内のSQL文を実行
-  c.execute("SELECT  item_img, item_name, price FROM Item where scene2 = ?;",(scene2,))
+  c.execute("SELECT  item_img, item_name, price , id FROM Item where scene1 = ?;",(scene1,))
   # タスクのデータを入れる配列を定義
   item_list = []  #配列の初期化
   for row in c.fetchall(): #row=新しく作った変数
-      item_list.append({"item_img":row[0],"item":row[1],"price":row[2]})
+      item_list.append({"item_img":row[0],"item":row[1],"price":row[2],"id":row[3]})
   c.close
   print(item_list)
-  return render_template("scene2_list.html",item_list = item_list)
+  return render_template("scene1_list.html",item_list = item_list)
 
 
 
