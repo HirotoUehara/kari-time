@@ -14,11 +14,11 @@
 
 
 <section id="sec1">
-  <div class="card mb-3" style="width: 1100px;  height: 500px; margin: auto; margin-top: 40px; padding-top: 20px; padding-right: 50px;">
-    <div class="row no-gutters itembox-main">
+  <div class="item-bg" style="width: 1100px;  height: auto; margin: auto; margin-top: 50px; padding-top: 20px; padding-right: 50; padding-bottom: 30px;">
+    <div class="row no-gutters ">
       <div class="col-md-4">
         <img src="{{item['img']}}" class="card-img-top item-img" alt="" style="width: 360px;">
-        <p>引用元:{{item['URL']}}</p>
+        <p style="font-size: 3px; color: gray;">引用元:{{item['URL']}}</p>
       </div>
       <div class="col-md-8 itembox">
         <div class="itemcard-body">
@@ -30,7 +30,7 @@
           <p class="item-shop"><span style="color: #25b7c0;"> Shop : </span><a href="{{item['URL']}}">商品の購入はこちら！</a></p>
 
           <p class="item-explain">{{item["explain"]}}</p>
-          <div class="tweet-btn" id="item-tweet">
+          <div class="tweet-btn" id="item-tweet" style="padding-bottom: 40px;">
             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="【沖縄のお酒で乾杯しよう！】気になるお酒を友達とシェア" data-via="lurejunkie" data-hashtags="かりーたいむ" data-lang="en" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             <p>気になるお酒を友達とシェアしよう！</p>
           </div> 
