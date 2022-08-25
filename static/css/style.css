@@ -109,6 +109,11 @@ body {
 	width: 80%;
 }
 
+.dropdown-item {
+	margin: auto;
+	width: 150px;
+}
+
 #sec1 {
 	height: 600px;
 	width: 100%;
@@ -212,11 +217,15 @@ body {
 	padding: 20px;
 }
 
+.mb-3 {
+	width: 200px;
+}
+
 
 .footer {
 	background-color: #bfecff;
-	margin: auto;
-	width: 80%;
+	margin: 100px auto;
+	width: 85%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
