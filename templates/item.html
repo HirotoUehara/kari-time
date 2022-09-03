@@ -14,11 +14,13 @@
 
 
 <section id="sec1">
-  <div class="item-bg" style="width: 1100px;  height: auto; margin: auto; margin-top: 50px; padding-top: 20px; padding-right: 50; padding-bottom: 30px;">
+  <div class="item-bg" style="width: 1100px;  height: auto; margin: 0 auto auto auto; padding-top: 20px; padding-right: 50; padding-bottom: 30px;">
     <div class="row no-gutters ">
       <div class="col-md-4">
         <img src="{{item['img']}}" class="card-img-top item-img" alt="" style="width: 360px;">
-        <p style="font-size: 3px; color: gray;">引用元:{{item['URL']}}</p>
+        <div class="ovarflow-wrap">
+          <p style="font-size: 3px; color: gray; margin-left: 5vh; ">引用元:{{item['URL']}}</p>
+        </div>
       </div>
       <div class="col-md-8 itembox">
         <div class="itemcard-body">

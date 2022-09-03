@@ -14,6 +14,7 @@ body {
 	background-image: url(../img/backg-waves.jpeg);
 	background-repeat: repeat;
 	padding-top: 56px;
+	height: max-content;
 }
 
 .navbar {
@@ -55,8 +56,8 @@ body {
 }
 
 .breadcrumb {
-	margin-top: 40px;
-	margin-bottom: 50px;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
 	background-color: #8EDDFF;
 }
 
@@ -73,6 +74,12 @@ body {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   z-index: 150;
+}
+
+.catchcopy {
+	/* position: relative; */
+	/* left: 50%;
+	transform: translateY(30%) translateX(-50%); */
 }
 
 
@@ -116,7 +123,8 @@ body {
 }
 
 #sec1 {
-	height: 600px;
+	min-height: 100vh;
+	position: relative;
 	width: 100%;
 	display: flex;
 }
@@ -145,7 +153,7 @@ body {
 }
 
 .dropdown-item {
-	color: #52bbde;
+	color: #0094f0;
 }
 
 /* --------item.htmlのcss-------- */
@@ -183,9 +191,15 @@ body {
 	object-fit: contain;
 }
 
+.ovarflow-wrap p {
+	height: fit-content;
+	width: 320px;
+	overflow-wrap: break-word;
+	word-break: break-all;
+}
 
 .item-name {
-	color: #4fadf5;
+	color: #fa7d98;
 	font-weight: 550;
 	line-height: 60px;
 	padding-top: 20px;
@@ -195,7 +209,10 @@ body {
 .item-price {
 	font-family: HuiFontP109;
 	padding-left: 20px;
+}
 
+.card-text {
+	padding-bottom: 5px;
 }
 
 .item-abv {
@@ -232,10 +249,9 @@ body {
 	width: 200px;
 }
 
-
 .footer {
 	background-color: #cff3f9;
-	margin: 100px auto;
+	margin: 0 auto;
 	width: 85%;
 	display: flex;
 	flex-wrap: wrap;
